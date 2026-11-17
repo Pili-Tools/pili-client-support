@@ -26,17 +26,17 @@
 
 **Pili Client** is a lightweight, modern, and developer-friendly REST API client seamlessly embedded into **VS Code**, **Cursor**, **VSCodium**, **Windsurf**, and **Eclipse Theia**.
 
-Unlike traditional API clients that store your requests in proprietary cloud accounts, Pili Client keeps all collections, environments, and tests directly in your workspace repository under `.pili-client/`. Track your endpoints, commit them with Git, review changes in pull requests, and collaborate with your team with zero lock-in.
+Unlike traditional API clients that store your requests in proprietary cloud accounts, Pili Client keeps all collections, environments, cookies, and tests securely stored on your local machine in your editor's global extension storage. This keeps your data completely independent of whatever folder, workspace, or project you have open in your editor, prevents repository clutter, and ensures zero cloud leak.
 
 ---
 
 ## ✨ Key Features
 
-* 🚀 **Git-Friendly by Design:** Collections, requests, and environments are saved as clean JSON files inside `.pili-client/`. Version them alongside your application code.
-* 🔒 **Zero Cloud Leak & Secret Isolation:** Your sensitive API tokens, passwords, and private keys reside in `.pili-client/.secrets.json`—automatically excluded by `.gitignore`.
+* 🚀 **Workspace-Independent & Git-Clean:** Collections, requests, and environments are saved in your editor's local global storage. Open any project, switch branches, or use an empty window—your API requests are always accessible without cluttering your code repositories.
+* 🔒 **Zero Cloud Leak & Secret Isolation:** 100% offline and privacy-first. Your sensitive API tokens, passwords, and private keys reside safely on your machine without external cloud sync or vendor lock-in.
 * ⚡ **High-Performance Svelte UI:** Near-instant boot time, fluid reactivity, and minimal memory footprint inside your editor.
 * 🌐 **No CORS Limitations:** HTTP/HTTPS requests run through the extension host process in native Node.js.
-* 🔄 **Live Workspace Sync:** Automatic filesystem watcher detects external Git changes (`checkout`, `pull`, `merge`) and instantly updates the collection tree.
+* 🔄 **Live Storage Sync:** Automatic filesystem watcher detects external changes and instantly updates the collection tree.
 * 🧪 **Automated Collection Runner:** Run request sequences, execute data-driven tests with CSV/JSON files, assert status/headers/body, and export test reports (HTML, JUnit).
 * 🍪 **Cookie & Certificate Manager:** Dedicated management for session cookies and client mTLS certificates (PFX, PEM, CRT, KEY).
 * 💻 **Code & Type Generator:** Generate client code snippets (cURL, Fetch, Python, PHP, Axios, etc.) and auto-generate TypeScript interfaces from JSON response payloads.
@@ -68,7 +68,7 @@ Unlike traditional API clients that store your requests in proprietary cloud acc
 
 ## 🚀 Quick Start
 
-1. Open any project workspace in VS Code or your favorite fork.
+1. Open any project workspace (or an empty window) in VS Code or your favorite fork.
 2. Click on the **Pili Client** icon in the Activity Bar (left sidebar).
 3. Click **New Request** (`+`) or run the command palette (`Ctrl+Shift+P` / `Cmd+Shift+P`):
    ```
@@ -78,19 +78,29 @@ Unlike traditional API clients that store your requests in proprietary cloud acc
 
 ---
 
-## 📁 Repository Structure in Your Projects
+## 📁 File & Data Storage Locations
 
-When you save requests or environments, Pili Client automatically creates the following folder in your project root:
+By default, Pili Client stores your collections, requests, environments, cookies, and certificates in the official VS Code global storage directory:
+
+* **Windows:** `%APPDATA%\Code\User\globalStorage\PiliClient.pili-client`
+* **macOS:** `~/Library/Application Support/Code/User/globalStorage/PiliClient.pili-client`
+* **Linux:** `~/.config/Code/User/globalStorage/PiliClient.pili-client`
+* **VS Code Server (Linux / Remote):** `~/.vscode-server/data/User/globalStorage/PiliClient.pili-client`
+
+> **Note:** If you are using editor forks such as **Cursor**, **VSCodium**, or **Windsurf**, the path automatically replaces `Code` with `Cursor`, `VSCodium`, etc.
+
+### Internal Folder Structure
 
 ```text
-my-project/
-├── .pili-client/
-│   ├── environments/         # Shared environments (.env, JSON)
-│   ├── .secrets.json         # Sensitive values (never committed)
-│   ├── _settings.json        # Collection-wide headers, auth & pre-scripts
-│   └── User_Service/
-│       ├── Get_Users.pili.json
-│       └── Create_User.pili.json
+PiliClient.pili-client/
+├── environments/         # Shared environments (global.env.json, .env, JSON)
+├── .secrets.json         # Sensitive values and local tokens (never exposed)
+├── .cookies.json         # Persistent Cookie Jar
+├── .certificates.json    # SSL/mTLS certificates configuration
+└── [Collection_Name]/    # Your collections and folders
+    ├── _collection.json  # Collection-wide headers, auth & pre-scripts
+    ├── Get_Users.pili.json
+    └── Create_User.pili.json
 ```
 
 ---

@@ -26,17 +26,17 @@
 
 **Pili Client** est un client d'API REST moderne, rapide et conçu pour les développeurs, intégré à **VS Code**, **Cursor**, **VSCodium**, **Windsurf** et **Eclipse Theia**.
 
-Toutes vos collections, environnements et requêtes sont stockés directement dans le dossier `.pili-client/` de votre projet, vous permettant de versionner vos tests avec Git sans dépendance à des services cloud propriétaires.
+Contrairement aux clients d'API traditionnels qui stockent vos données sur des serveurs cloud propriétaires, Pili Client conserve toutes vos collections, environnements, cookies et tests en sécurité dans le stockage global d'extensions de votre éditeur sur votre machine locale. Vos données restent ainsi indépendantes du projet ouvert et vos dépôts Git restent propres.
 
 ---
 
 ## ✨ Fonctionnalités Principales
 
-* 🚀 **Compatible Git par conception :** Vos requêtes et environnements sont sauvegardés sous forme de fichiers JSON lisibles dans `.pili-client/`.
-* 🔒 **Confidentialité totale et séparation des secrets :** Vos clés d'API et mots de passe sensibles résident dans `.pili-client/.secrets.json` (ignoré automatiquement par `.gitignore`).
+* 🚀 **Indépendant du dossier & Dépôts propres :** Vos requêtes et environnements sont sauvegardés dans le stockage global local de votre éditeur, sans encombrer vos dépôts de code.
+* 🔒 **Confidentialité totale et séparation des secrets :** 100% hors ligne et local. Vos clés d'API et mots de passe sensibles résident en toute sécurité sur votre machine.
 * ⚡ **Interface réactive en Svelte :** Démarrage instantané et empreinte mémoire minimale dans l'éditeur.
 * 🌐 **Sans restrictions CORS :** Les requêtes HTTP/HTTPS s'exécutent dans le processus Node.js natif.
-* 🔄 **Synchronisation en direct :** Détection automatique des modifications de fichiers provoquées par Git (`pull`, `checkout`, `merge`).
+* 🔄 **Synchronisation en direct :** Détection automatique des modifications de fichiers et mise à jour immédiate.
 * 🧪 **Exécuteur de collections (Collection Runner) :** Exécution séquentielle, tests basés sur des données (CSV/JSON), assertions et rapports (HTML, JUnit).
 * 🍪 **Gestionnaire de cookies et certificats :** Prise en charge des cookies de session et des certificats mTLS (PFX, PEM, CRT, KEY).
 * 💻 **Générateur de code et de types :** Génération d'extraits de code (cURL, Python, PHP, Fetch, Axios) et d'interfaces TypeScript automatiques.
@@ -54,6 +54,17 @@ Toutes vos collections, environnements et requêtes sont stockés directement da
 ### Depuis VSCodium / Open VSX
 1. Ouvrez le gestionnaire d'extensions.
 2. Recherchez `Pili Client` sur Open VSX et installez-le.
+
+---
+
+## 📁 Emplacement des Fichiers et Stockage
+
+Par défaut, Pili Client stocke toutes vos collections, requêtes, environnements, cookies et certificats dans le répertoire officiel de stockage global de VS Code :
+
+* **Windows :** `%APPDATA%\Code\User\globalStorage\PiliClient.pili-client`
+* **macOS :** `~/Library/Application Support/Code/User/globalStorage/PiliClient.pili-client`
+* **Linux :** `~/.config/Code/User/globalStorage/PiliClient.pili-client`
+* **VS Code Server (Linux / Remote) :** `~/.vscode-server/data/User/globalStorage/PiliClient.pili-client`
 
 ---
 

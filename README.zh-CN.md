@@ -26,17 +26,17 @@
 
 **Pili Client** 是一款轻量、现代且专为开发者设计的 REST API 客户端，深度集成于 **VS Code**、**Cursor**、**VSCodium**、**Windsurf** 和 **Eclipse Theia**。
 
-不同于将您的请求数据存储在专有云端的传统 API 工具，Pili Client 将所有集合、环境变量和测试数据保存在您本地项目的 `.pili-client/` 目录中。您可以像管理代码一样使用 Git 版本化 API 请求，并在团队中安全协作。
+不同于将您的请求数据存储在专有云端的传统 API 工具，Pili Client 将所有集合、环境变量、Cookie 和测试数据安全保存在您本地编辑器的全局扩展存储中。无论您打开什么项目或工作区，您的 API 数据都随时可用，同时保持您的 Git 代码仓库干净整洁。
 
 ---
 
 ## ✨ 核心特性
 
-* 🚀 **原生 Git 友好：** 请求与环境配置均保存为清晰规范的 JSON 文件，与业务代码共同管理版本。
-* 🔒 **隐私优先与敏感凭证隔离：** 密码、API Key 等敏感数据存放于 `.pili-client/.secrets.json`（已被 `.gitignore` 自动排除）。
+* 🚀 **独立于工作区与保持仓库干净：** 请求与环境配置均保存于编辑器的本地全局存储目录中，不会污染您的代码仓库。
+* 🔒 **隐私优先与敏感凭证隔离：** 100% 本地离线存储。密码、API Key 等敏感数据存放于本地，无外部云同步泄漏风险。
 * ⚡ **极速 Svelte 界面：** 秒级启动，流畅响应，超低内存占用。
 * 🌐 **无 CORS 跨域限制：** 请求通过编辑器后台 Node.js 原生进程直接发送。
-* 🔄 **工作区实时同步：** 文件监听器可自动识别外部 Git 变更（`checkout`、`pull`、`merge`）并即时刷新集合列表。
+* 🔄 **实时存储同步：** 文件监听器可自动识别外部变更并即时刷新集合列表。
 * 🧪 **自动化集合执行器（Collection Runner）：** 支持批量运行、基于 CSV/JSON 数据的驱动测试、自动断言以及 HTML/JUnit 格式报告导出。
 * 🍪 **Cookie 与证书管理器：** 专属面板管理会话 Cookie 与 mTLS 双向认证证书（PFX、PEM、CRT、KEY）。
 * 💻 **代码与类型生成：** 一键生成多种语言请求代码（cURL、Python、PHP、Fetch、Axios 等）并可从 JSON 响应中自动生成 TypeScript 接口。
@@ -54,6 +54,17 @@
 ### 在 VSCodium / Open VSX 中安装
 1. 打开 Open VSX 插件市场。
 2. 搜索 `Pili Client` 并点击安装。
+
+---
+
+## 📁 文件与数据存储位置
+
+默认情况下，Pili Client 将您的所有集合、请求、环境、Cookie 和证书保存在 VS Code 官方全局扩展存储目录中：
+
+* **Windows:** `%APPDATA%\Code\User\globalStorage\PiliClient.pili-client`
+* **macOS:** `~/Library/Application Support/Code/User/globalStorage/PiliClient.pili-client`
+* **Linux:** `~/.config/Code/User/globalStorage/PiliClient.pili-client`
+* **VS Code Server (Linux / 远程):** `~/.vscode-server/data/User/globalStorage/PiliClient.pili-client`
 
 ---
 

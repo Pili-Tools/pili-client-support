@@ -26,17 +26,17 @@
 
 **Pili Client** es un cliente de APIs REST ligero, moderno y pensado para desarrolladores, integrado directamente en **VS Code**, **Cursor**, **VSCodium**, **Windsurf** y **Eclipse Theia**.
 
-A diferencia de los clientes de APIs tradicionales que almacenan tus peticiones en cuentas propietarias en la nube, Pili Client guarda todas las colecciones, entornos y pruebas directamente en el repositorio de tu proyecto bajo `.pili-client/`. Rastrea tus endpoints, haz commits con Git, revisa cambios en pull requests y colabora con tu equipo sin ataduras de proveedores.
+A diferencia de los clientes de APIs tradicionales que almacenan tus peticiones en cuentas propietarias en la nube, Pili Client guarda todas las colecciones, entornos, cookies y pruebas de forma segura en el almacenamiento global de tu editor en tu propia máquina. Esto mantiene tus datos totalmente independientes del proyecto, carpeta o espacio de trabajo que tengas abierto, evita ensuciar tus repositorios Git y garantiza cero fugas a la nube.
 
 ---
 
 ## ✨ Características Principales
 
-* 🚀 **Amigable con Git por diseño:** Peticiones, colecciones y entornos se guardan como archivos JSON limpios dentro de `.pili-client/` para versionarlos con tu código.
-* 🔒 **Cero fugas a la nube y separación de secretos:** Tus tokens, contraseñas y claves privadas residen en `.pili-client/.secrets.json` (excluido automáticamente por `.gitignore`).
+* 🚀 **Independiente del Espacio de Trabajo y Repositorio Limpio:** Las peticiones, colecciones y entornos se guardan en el almacenamiento global local de tu editor. Abre cualquier proyecto, cambia de ramas o trabaja en una ventana vacía: tus datos siempre estarán disponibles sin alterar tus repositorios.
+* 🔒 **Cero fugas a la nube y privacidad total:** 100% local y fuera de línea. Tus tokens sensibles, contraseñas y claves privadas residen de forma segura en tu equipo, sin sincronización externa ni ataduras de proveedores.
 * ⚡ **Interfaz fluida en Svelte:** Arranque casi instantáneo, reactividad total y mínimo consumo de memoria en tu editor.
 * 🌐 **Sin restricciones de CORS:** Las peticiones HTTP/HTTPS se ejecutan en el proceso nativo de Node.js del Extension Host.
-* 🔄 **Sincronización en vivo del espacio de trabajo:** Observador de sistema de archivos que detecta cambios externos de Git (`checkout`, `pull`, `merge`) y actualiza el árbol automáticamente.
+* 🔄 **Sincronización en vivo del almacenamiento:** Observador de sistema de archivos que detecta cambios externos y actualiza el árbol automáticamente.
 * 🧪 **Collection Runner automatizado:** Ejecuta secuencias de peticiones, pruebas basadas en datos con archivos CSV/JSON, aserciones automáticas y reportes en HTML o JUnit.
 * 🍪 **Gestor de Cookies y Certificados:** Panel dedicado para la gestión de cookies de sesión y certificados de cliente mTLS (PFX, PEM, CRT, KEY).
 * 💻 **Generador de Código y Tipos:** Genera snippets en múltiples lenguajes (cURL, Fetch, Python, PHP, Axios, etc.) e interfaces de TypeScript automáticas a partir de las respuestas JSON.
@@ -68,7 +68,7 @@ A diferencia de los clientes de APIs tradicionales que almacenan tus peticiones 
 
 ## 🚀 Inicio Rápido
 
-1. Abre cualquier carpeta o proyecto en VS Code o tu editor favorito.
+1. Abre cualquier carpeta o proyecto (o una ventana vacía) en VS Code o tu editor favorito.
 2. Haz clic en el icono de **Pili Client** en la Barra de Actividad (barra lateral izquierda).
 3. Haz clic en **Nueva Petición** (`+`) o abre la paleta de comandos (`Ctrl+Shift+P` / `Cmd+Shift+P`):
    ```
@@ -78,19 +78,29 @@ A diferencia de los clientes de APIs tradicionales que almacenan tus peticiones 
 
 ---
 
-## 📁 Estructura en tus Proyectos
+## 📁 Ubicación de Archivos y Almacenamiento
 
-Cuando guardas peticiones o entornos, Pili Client genera la siguiente estructura en la raíz de tu proyecto:
+Por defecto, Pili Client almacena todas tus colecciones, peticiones, entornos, cookies y certificados en el directorio oficial de almacenamiento global de extensiones de VS Code:
+
+* **Windows:** `%APPDATA%\Code\User\globalStorage\PiliClient.pili-client`
+* **macOS:** `~/Library/Application Support/Code/User/globalStorage/PiliClient.pili-client`
+* **Linux:** `~/.config/Code/User/globalStorage/PiliClient.pili-client`
+* **VS Code Server (Linux / Remoto):** `~/.vscode-server/data/User/globalStorage/PiliClient.pili-client`
+
+> **Nota:** Si utilizas forks como **Cursor**, **VSCodium** o **Windsurf**, la ruta reemplaza automáticamente `Code` por `Cursor`, `VSCodium`, etc.
+
+### Estructura Interna de Carpetas
 
 ```text
-mi-proyecto/
-├── .pili-client/
-│   ├── environments/         # Entornos compartidos (.env, JSON)
-│   ├── .secrets.json         # Valores sensibles (nunca en el commit)
-│   ├── _settings.json        # Ajustes globales de colección (headers, scripts)
-│   └── Servicio_Usuarios/
-│       ├── Obtener_Usuarios.pili.json
-│       └── Crear_Usuario.pili.json
+PiliClient.pili-client/
+├── environments/         # Entornos compartidos (global.env.json, .env, JSON)
+├── .secrets.json         # Valores sensibles y tokens locales (nunca expuestos)
+├── .cookies.json         # Gestor persistente de Cookies (Cookie Jar)
+├── .certificates.json    # Configuración de certificados SSL/mTLS
+└── [Nombre_Colección]/   # Tus colecciones y subcarpetas
+    ├── _collection.json  # Ajustes de colección (headers, scripts, auth)
+    ├── Obtener_Usuarios.pili.json
+    └── Crear_Usuario.pili.json
 ```
 
 ---
