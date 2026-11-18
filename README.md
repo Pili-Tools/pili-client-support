@@ -2,7 +2,10 @@
   <img src="assets/images/logo.svg" alt="Pili Client Logo" width="128" height="128" />
   <h1>Pili Client</h1>
   <p><strong>Fast, Git-friendly, and privacy-first HTTP/REST client for Visual Studio Code and forks.</strong></p>
-  <p><em>Developed with ❤️ by <strong>Misael Arroyo</strong></em></p>
+  <p>
+    <em>Developed with ❤️ by <strong>Misael Arroyo</strong></em><br />
+    <a href="https://ko-fi.com/piliclient"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow" alt="Donate" /></a>
+  </p>
 
   <p>
     <a href="README.md">English</a> •
@@ -103,6 +106,21 @@ PiliClient.pili-client/
     ├── Get_Users.pili.json
     └── Create_User.pili.json
 ```
+
+---
+
+## 🔮 Upcoming Features & Roadmap
+
+We are continuously evolving **Pili Client** to be the fastest, cleanest, and most privacy-focused API client for your editor. Here is what we are working on next:
+
+* 🟡 **Pre-Request & Test Scripting Engine (`pi.*` & `pm.*`):** Secure, isolated execution of modern JavaScript (`async/await`), test assertions, and 100% compatibility with existing Postman scripts.
+* 🔵 **Frictionless Importer & Exporter:** Import and export Postman collections (v2.1) preserving test scripts, plus OpenAPI / Swagger specification support.
+* 🔵 **GraphQL Support:** Interactive query/mutation builder, variables editor, and schema introspection.
+* 🔵 **Realtime Protocols (WebSocket & SSE):** Stream and inspect live messages directly within the extension.
+* 💡 **API Documentation Generator:** One-click collection export to clean Markdown or interactive HTML docs for your team.
+
+> 💬 **Want us to prioritize one of these features or have a suggestion?**  
+> Let us know by opening a [Feature Request](https://github.com/Pili-Tools/pili-client-support/issues/new?template=feature_request.md)!
 
 ---
 

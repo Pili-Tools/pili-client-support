@@ -2,7 +2,10 @@
   <img src="assets/images/logo.svg" alt="Logo de Pili Client" width="128" height="128" />
   <h1>Pili Client</h1>
   <p><strong>Cliente HTTP/REST rápido, amigable con Git y respetuoso de la privacidad para Visual Studio Code y forks.</strong></p>
-  <p><em>Desarrollado con ❤️ por <strong>Misael Arroyo</strong></em></p>
+  <p>
+    <em>Desarrollado con ❤️ por <strong>Misael Arroyo</strong></em><br />
+    <a href="https://ko-fi.com/piliclient"><img src="https://img.shields.io/badge/inv%C3%ADtame%20un%20caf%C3%A9-donar-yellow" alt="Donar" /></a>
+  </p>
 
   <p>
     <a href="README.md">English</a> •
@@ -103,6 +106,21 @@ PiliClient.pili-client/
     ├── Obtener_Usuarios.pili.json
     └── Crear_Usuario.pili.json
 ```
+
+---
+
+## 🔮 Próximas Novedades y Roadmap
+
+Trabajamos de forma constante para que **Pili Client** sea el cliente API más rápido, limpio y privado para tu editor. Estas son las características en las que nos enfocamos próximamente:
+
+* 🟡 **Motor de Scripts Pre-Request y Tests (`pi.*` & `pm.*`):** Ejecución segura de JavaScript moderno (`async/await`) en entorno aislado, aserciones y compatibilidad 100% con scripts existentes de Postman.
+* 🔵 **Importador y Exportador sin Fricción:** Importación y exportación de colecciones Postman (v2.1) conservando scripts de test, además de soporte para especificaciones OpenAPI / Swagger.
+* 🔵 **Soporte para GraphQL:** Constructor interactivo de queries/mutations, editor de variables e introspección de schemas.
+* 🔵 **Protocolos en Tiempo Real (WebSocket & SSE):** Envío y recepción de mensajes en streaming directamente desde la extensión.
+* 💡 **Generador de Documentación:** Exportación rápida de colecciones a páginas Markdown o HTML interactivas para tu equipo.
+
+> 💬 **¿Quieres que prioricemos alguna de estas funciones o tienes una sugerencia?**  
+> ¡Cuéntanos abriendo una [Solicitud de Funcionalidad](https://github.com/Pili-Tools/pili-client-support/issues/new?template=feature_request.md)!
 
 ---
 

@@ -2,7 +2,10 @@
   <img src="assets/images/logo.svg" alt="Logotipo do Pili Client" width="128" height="128" />
   <h1>Pili Client</h1>
   <p><strong>Cliente HTTP/REST rápido, amigável ao Git e focado em privacidade para Visual Studio Code e forks.</strong></p>
-  <p><em>Desenvolvido com ❤️ por <strong>Misael Arroyo</strong></em></p>
+  <p>
+    <em>Desenvolvido com ❤️ por <strong>Misael Arroyo</strong></em><br />
+    <a href="https://ko-fi.com/piliclient"><img src="https://img.shields.io/badge/pague--me%20um%20caf%C3%A9-doar-yellow" alt="Doar" /></a>
+  </p>
 
   <p>
     <a href="README.md">English</a> •
@@ -66,6 +69,21 @@ Por padrão, o Pili Client armazena suas coleções, requisições, ambientes, c
 * **macOS:** `~/Library/Application Support/Code/User/globalStorage/PiliClient.pili-client`
 * **Linux:** `~/.config/Code/User/globalStorage/PiliClient.pili-client`
 * **VS Code Server (Linux / Remoto):** `~/.vscode-server/data/User/globalStorage/PiliClient.pili-client`
+
+---
+
+## 🔮 Próximos Recursos & Roadmap
+
+Estamos continuamente aprimorando o **Pili Client** para ser o cliente de API mais rápido, limpo e focado em privacidade para o seu editor. Veja no que estamos trabalhando a seguir:
+
+* 🟡 **Motor de Scripts Pre-Request & Testes (`pi.*` & `pm.*`):** Execução segura e isolada de JavaScript moderno (`async/await`), asserções de testes e 100% de compatibilidade com scripts existentes do Postman.
+* 🔵 **Importador e Exportador Fluido:** Importação e exportação de coleções do Postman (v2.1) preservando scripts de testes, além de suporte a especificações OpenAPI / Swagger.
+* 🔵 **Suporte a GraphQL:** Construtor interativo de queries/mutações, editor de variáveis e introspecção de schemas.
+* 🔵 **Protocolos em Tempo Real (WebSocket & SSE):** Transmissão e inspeção de mensagens em tempo real diretamente na extensão.
+* 💡 **Gerador de Documentação de API:** Exportação com um clique de coleções para páginas interativas em Markdown ou HTML.
+
+> 💬 **Gostaria que priorizássemos algum recurso ou tem uma sugestão?**  
+> Compartilhe sua ideia abrindo uma [Solicitação de Recurso](https://github.com/Pili-Tools/pili-client-support/issues/new?template=feature_request.md)!
 
 ---
 

@@ -2,7 +2,10 @@
   <img src="assets/images/logo.svg" alt="Pili Client 图标" width="128" height="128" />
   <h1>Pili Client</h1>
   <p><strong>专为 Visual Studio Code 及衍生编辑器打造的快速、Git 友好且注重隐私的 HTTP/REST 客户端。</strong></p>
-  <p><em>由 <strong>Misael Arroyo</strong> 用 ❤️ 开发</em></p>
+  <p>
+    <em>由 <strong>Misael Arroyo</strong> 用 ❤️ 开发</em><br />
+    <a href="https://ko-fi.com/piliclient"><img src="https://img.shields.io/badge/%E8%AF%B7%E6%88%91%E5%96%9D%E6%9D%AF%E5%92%96%E5%95%A1-%E8%B5%9E%E5%8A%A9-yellow" alt="赞助" /></a>
+  </p>
 
   <p>
     <a href="README.md">English</a> •
@@ -66,6 +69,21 @@
 * **macOS:** `~/Library/Application Support/Code/User/globalStorage/PiliClient.pili-client`
 * **Linux:** `~/.config/Code/User/globalStorage/PiliClient.pili-client`
 * **VS Code Server (Linux / 远程):** `~/.vscode-server/data/User/globalStorage/PiliClient.pili-client`
+
+---
+
+## 🔮 未来规划与路线图 (Roadmap)
+
+我们一直在持续优化 **Pili Client**，致力于为您的编辑器打造最快速、整洁且注重隐私的 API 调试工具。以下是我们近期重点推进的新特性：
+
+* 🟡 **Pre-Request 与测试脚本引擎 (`pi.*` & `pm.*`)：** 在隔离沙箱中安全执行现代 JavaScript (`async/await`)、断言测试以及 100% 兼容现有的 Postman 脚本。
+* 🔵 **无缝导入与导出：** 支持完整保留测试脚本的 Postman (v2.1) 集合导入导出，并支持 OpenAPI / Swagger 规范。
+* 🔵 **GraphQL 支持：** 交互式查询/变更构建器、变量编辑器与 Schema 自省。
+* 🔵 **实时协议支持 (WebSocket & SSE)：** 直接在扩展内进行实时流式消息的收发与检查。
+* 💡 **API 文档生成器：** 一键将集合导出为整洁的 Markdown 或交互式 HTML 文档。
+
+> 💬 **希望我们优先实现某项功能，或者有新想法？**  
+> 欢迎通过提交 [功能建议 (Feature Request)](https://github.com/Pili-Tools/pili-client-support/issues/new?template=feature_request.md) 告诉我们！
 
 ---
 

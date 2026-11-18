@@ -2,7 +2,10 @@
   <img src="assets/images/logo.svg" alt="Logo de Pili Client" width="128" height="128" />
   <h1>Pili Client</h1>
   <p><strong>Client HTTP/REST rapide, compatible Git et respectueux de la vie privée pour Visual Studio Code et ses dérivés.</strong></p>
-  <p><em>Développé avec ❤️ par <strong>Misael Arroyo</strong></em></p>
+  <p>
+    <em>Développé avec ❤️ par <strong>Misael Arroyo</strong></em><br />
+    <a href="https://ko-fi.com/piliclient"><img src="https://img.shields.io/badge/offrez--moi%20un%20caf%C3%A9-soutenir-yellow" alt="Soutenir" /></a>
+  </p>
 
   <p>
     <a href="README.md">English</a> •
@@ -66,6 +69,21 @@ Par défaut, Pili Client stocke toutes vos collections, requêtes, environnement
 * **macOS :** `~/Library/Application Support/Code/User/globalStorage/PiliClient.pili-client`
 * **Linux :** `~/.config/Code/User/globalStorage/PiliClient.pili-client`
 * **VS Code Server (Linux / Remote) :** `~/.vscode-server/data/User/globalStorage/PiliClient.pili-client`
+
+---
+
+## 🔮 Prochaines Fonctionnalités & Roadmap
+
+Nous développons continuellement **Pili Client** pour en faire le client API le plus rapide, propre et respectueux de la vie privée pour votre éditeur. Voici ce sur quoi nous travaillons prochainement :
+
+* 🟡 **Moteur de Scripts Pre-Request & Tests (`pi.*` & `pm.*`) :** Exécution sécurisée et isolée de JavaScript moderne (`async/await`), assertions de tests et compatibilité à 100% avec les scripts Postman existants.
+* 🔵 **Importateur & Exportateur sans Friction :** Importation et exportation de collections Postman (v2.1) en conservant les scripts de test, ainsi que le support des spécifications OpenAPI / Swagger.
+* 🔵 **Support GraphQL :** Constructeur interactif de requêtes/mutations, éditeur de variables et introspection de schémas.
+* 🔵 **Protocoles Temps Réel (WebSocket & SSE) :** Diffusion et analyse de messages en direct directement depuis l'extension.
+* 💡 **Générateur de Documentation API :** Exportation en un clic de vos collections vers des pages Markdown ou HTML interactives.
+
+> 💬 **Vous souhaitez que nous priorisions une fonctionnalité ou avez une idée ?**  
+> Faites-le nous savoir en ouvrant une [Demande de fonctionnalité](https://github.com/Pili-Tools/pili-client-support/issues/new?template=feature_request.md) !
 
 ---
 
