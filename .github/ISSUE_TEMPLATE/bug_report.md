@@ -25,7 +25,7 @@ If applicable, add screenshots or output from `Pili Client: Show Logs` in the co
 **Environment (please complete the following information):**
 - OS: [e.g. macOS 14.5, Windows 11, Ubuntu 22.04]
 - Editor: [e.g. VS Code 1.90.0, Cursor 0.38, VSCodium, Windsurf]
-- Pili Client Version: [e.g. 0.1.0]
+- Pili Client Version: [e.g. 0.1.2]
 
 **Additional Context**
 Add any other context about the problem here (e.g., whether it happens with specific HTTP methods, environments, or file types).

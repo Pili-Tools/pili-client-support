@@ -19,7 +19,7 @@
   <p>
     <a href="https://marketplace.visualstudio.com/items?itemName=PiliClient.pili-client"><img src="https://img.shields.io/badge/VS%20Marketplace-Pili%20Client-blue?logo=visual-studio-code" alt="Visual Studio Marketplace" /></a>
     <a href="https://open-vsx.org/extension/PiliClient/pili-client"><img src="https://img.shields.io/badge/Open%20VSX-Pili%20Client-purple?logo=eclipseide" alt="Open VSX" /></a>
-    <a href="https://github.com/Pili-Tools/pili-client-support/releases"><img src="https://img.shields.io/badge/Release-v0.1.1-green" alt="Última versión" /></a>
+    <a href="https://github.com/Pili-Tools/pili-client-support/releases"><img src="https://img.shields.io/badge/Release-v0.1.2-green" alt="Última versión" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/Licencia-Freeware-informational" alt="Licencia" /></a>
   </p>
 </div>
@@ -64,7 +64,7 @@ A diferencia de los clientes de APIs tradicionales que almacenan tus peticiones 
 1. Descarga el paquete `.vsix` más reciente desde [Releases](https://github.com/Pili-Tools/pili-client-support/releases).
 2. Ejecuta en tu terminal:
    ```bash
-   code --install-extension pili-client-0.1.0.vsix
+   code --install-extension pili-client-0.1.2.vsix
    ```
    *(O arrastra el archivo `.vsix` hacia la vista de Extensiones de tu editor).*
 
