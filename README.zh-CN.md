@@ -2,6 +2,7 @@
   <img src="assets/images/logo.svg" alt="Pili Client 图标" width="128" height="128" />
   <h1>Pili Client</h1>
   <p><strong>专为 Visual Studio Code 及衍生编辑器打造的快速、Git 友好且注重隐私的 HTTP/REST 客户端。</strong></p>
+  <p><em>由 <strong>Misael Arroyo</strong> 用 ❤️ 开发</em></p>
 
   <p>
     <a href="README.md">English</a> •
@@ -77,6 +78,12 @@
 
 ---
 
+## 👨‍💻 作者与致谢
+
+Pili Client 由 **Misael Arroyo** ([Pili Tools](https://github.com/Pili-Tools)) 倾心设计与开发。
+
+---
+
 ## 📄 许可证
 
-Pili Client 作为免费专有软件（Freeware）分发。详见 [LICENSE](LICENSE)。
+Pili Client 作为由 **Misael Arroyo (Pili Tools)** 开发的免费专有软件（Freeware）分发。详见 [LICENSE](LICENSE)。

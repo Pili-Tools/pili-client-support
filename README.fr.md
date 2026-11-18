@@ -2,6 +2,7 @@
   <img src="assets/images/logo.svg" alt="Logo de Pili Client" width="128" height="128" />
   <h1>Pili Client</h1>
   <p><strong>Client HTTP/REST rapide, compatible Git et respectueux de la vie privée pour Visual Studio Code et ses dérivés.</strong></p>
+  <p><em>Développé avec ❤️ par <strong>Misael Arroyo</strong></em></p>
 
   <p>
     <a href="README.md">English</a> •
@@ -75,6 +76,12 @@ Par défaut, Pili Client stocke toutes vos collections, requêtes, environnement
 
 ---
 
+## 👨‍💻 Auteur & Crédits
+
+Pili Client est conçu et développé avec ❤️ par **Misael Arroyo** ([Pili Tools](https://github.com/Pili-Tools)).
+
+---
+
 ## 📄 Licence
 
-Pili Client est distribué en tant que logiciel propriétaire gratuit (Freeware). Voir [LICENSE](LICENSE).
+Pili Client est distribué en tant que logiciel propriétaire gratuit (Freeware) développé par **Misael Arroyo (Pili Tools)**. Voir [LICENSE](LICENSE).
